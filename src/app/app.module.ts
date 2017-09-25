@@ -13,6 +13,9 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 import { UserDetailGuard } from './user-detail-guard.service';
 import { RestrictedAccessComponent } from './components/restricted-access/restricted-access.component';
 import { NotSelectedComponent } from './components/not-selected/not-selected.component'
+import { DisplayComponent } from './components/display/display.component';
+import { IncerementComponent } from './components/increment/increment.component';
+import { DecerementComponent } from './components/decrement/decrement.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { NotSelectedComponent } from './components/not-selected/not-selected.com
     UserListItemComponent,
     UserDetailComponent,
     RestrictedAccessComponent,
-    NotSelectedComponent
+    NotSelectedComponent,
+    DisplayComponent,
+    IncerementComponent,
+    DecerementComponent
   ],
   imports: [
     BrowserModule,

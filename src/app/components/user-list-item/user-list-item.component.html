@@ -1,4 +1,7 @@
-<div routerLink="/users/{{user.id}}">
-    <h4>{{user.username}}</h4>
-    
+<div class="media" class="border p-2"  routerLink="/users/{{user.id}}" >
+  <img class="d-flex mr-3" src="http://lorempixel.com/64/64/people/{{user.id}}/">
+  <div class="media-body">
+    <div class="mb-0">{{user.name}}</div>
+     <div class="mb-0" class="text-primary">{{user.username}} |  {{user.email}} </div>
+  </div>
 </div>

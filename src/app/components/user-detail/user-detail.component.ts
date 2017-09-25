@@ -13,6 +13,8 @@ import { User } from '../../models/user';
 })
 export class UserDetailComponent implements OnInit {
   private userId: Number;
+  private activeUser: User;
+
 
   constructor(private route: ActivatedRoute, private router: Router, private _userService: UserService
   ) {
@@ -20,9 +22,17 @@ export class UserDetailComponent implements OnInit {
 
   ngOnInit() {
 
+
     this.route.params.forEach((params: ParamMap) => {
       this.userId = +params['id'];
       console.log('Requested Id ' + this.userId);
+      this.requestUserById(this.userId)
+    });
+  }
+
+  private requestUserById(id: Number) {
+    this._userService.getUserById(id).subscribe(user => {
+      this.activeUser = user;
     });
   }
 

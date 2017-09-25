@@ -1,3 +1,13 @@
-<div>
-    Heyyyy {{userId}}
+<div class="row">
+
+    <div class="thumbnail">
+        <img src="http://lorempixel.com/600/400/people/{{userId}}" alt/>
+        <div class="caption">
+            <h5>{{activeUser.name}}</h5>
+            <div class="mb-0">@{{activeUser.username}} | {{activeUser.email}} </div>
+            <div class="mb-2">{{activeUser.name}} lives at {{activeUser.address.street}}, {{activeUser.address.suite}}, {{activeUser.address.city}},
+                {{activeUser.address.zipcode}}</div>
+            <div class="mb-0">{{activeUser.name}} works at {{activeUser.company.name}} which is a {{activeUser.company.catchPhrase}} that {{activeUser.company.bs}}</div>
+        </div>
+    </div>
 </div>
