@@ -8,20 +8,29 @@ import { Routing } from './app.routing'
 import { UsersComponent } from './components/pages/users/users.component';
 import { SubjectsComponent } from './components/pages/subjects/subjects.component';
 import { UserListComponent } from './components/user-list/user-list.component'
+import { UserListItemComponent } from './components/user-list-item/user-list-item.component'
+import { UserDetailComponent } from './components/user-detail/user-detail.component'
+import { UserDetailGuard } from './user-detail-guard.service';
+import { RestrictedAccessComponent } from './components/restricted-access/restricted-access.component';
+import { NotSelectedComponent } from './components/not-selected/not-selected.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     SubjectsComponent,
-    UserListComponent
+    UserListComponent,
+    UserListItemComponent,
+    UserDetailComponent,
+    RestrictedAccessComponent,
+    NotSelectedComponent
   ],
   imports: [
     BrowserModule,
     Routing,
     HttpModule
   ],
-  providers: [],
+  providers: [UserDetailGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
